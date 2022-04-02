@@ -1,0 +1,40 @@
+# write a function that takes in a non-empty array of distinct integers representing a target sum. if any two numbers in the input array sum up to the target sum, the function should return them in an array in any order. if no two numbers sum up to the targetsum, the function should return an empty array.
+
+def twoNumberSum(array,targetSum):
+    pass
+#   enter your code here
+
+# 1 BRUT force way
+# use a double for loop method to iterate and find two numbers.
+
+
+def twoNumberSum(array,targetSum):
+    for x in range(0,len(array)-1):
+        firstNum = array[x]
+        for y in range(x+1,len(array)):
+            secondNum = array[y]
+            if firstNum + secondNum == targetSum:
+                return [firstNum,secondNum]
+
+    return[]
+
+
+# time: O(n^2)
+# space: O(1)
+
+
+
+# 2 Better way
+# instead of iterating method, you can create a dictionary and store all the values in the hash map after targetSum - arrayIndex
+# see if the value is in the dictionary and return if its in the hash map
+
+def twoNumberSum(array,targetSum):
+    dictForTargetSum = {}
+    for x in array:
+        potentialNumber = targetSum - x
+        if potentialNumber in dictForTargetSum:
+            return [x,potentialNumber]
+        else:
+            dictForTargetSum[x]= True
+
+    return []
