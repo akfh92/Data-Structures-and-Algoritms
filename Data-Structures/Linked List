@@ -1,0 +1,42 @@
+class Node:
+   def __init__(self, dataval=None):
+      self.dataval = dataval
+      self.nextval = None
+
+
+class SLinkedList:
+   def __init__(self):
+      self.headval = None
+
+   def listprint(self):
+      printval = self.headval
+      while printval is not None:
+         print (printval.dataval)
+         printval = printval.nextval
+
+   def AtBegining(self,val):
+      newNode = Node(val)
+      newNode.nextval = self.headval
+      self.nextval = newNode
+
+
+   def AtEnd(self,val):
+      newNode = Node(val)
+      pointer = self.headval
+      while pointer.nextval is not None:
+          pointer = pointer.nextval
+
+      pointer.nextval = newNode
+
+   def Inbetween(self,middleNode,val):
+      if middleNode is None:
+          return
+
+      newNode= Node(val)
+      newNode.nextval = middleNode.nextval
+      middleNode.nextval = newNode
+
+
+   def RemoveNode(self, RemoveKey):
+       pass
+              
