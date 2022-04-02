@@ -20,3 +20,6 @@ This repository will explain the data structure and algorithms in Python.
   * Graphs
   * Trie
 * Algorithms
+* Practice Algorithms
+  * Easy Problems:
+    * Two Sum
