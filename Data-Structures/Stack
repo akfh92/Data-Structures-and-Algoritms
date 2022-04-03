@@ -1,0 +1,22 @@
+class Stack:
+   def __init__(self):
+      self.stack= []
+
+   def add(self,dataVal):
+#      check if the stack already has the item, then apeend the value
+      if dataVal not in self.stack:
+         self.stack.append(dataVal)
+         return True
+      else:
+         return False
+   def peek(self):
+      # see what is on top of the stack without removing it
+      return self.stack[-1:]
+
+   def remove(self):
+      # check to see if the stack is empty first before removing the top.
+      if len(self.stack) ==0:
+         return
+      else:
+         return self.stack.pop()
+
