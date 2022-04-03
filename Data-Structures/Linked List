@@ -14,11 +14,11 @@ class SLinkedList:
          print (printval.dataval)
          printval = printval.nextval
 
+
    def AtBegining(self,val):
       newNode = Node(val)
       newNode.nextval = self.headval
-      self.nextval = newNode
-
+      self.headval = newNode
 
    def AtEnd(self,val):
       newNode = Node(val)
@@ -36,7 +36,23 @@ class SLinkedList:
       newNode.nextval = middleNode.nextval
       middleNode.nextval = newNode
 
+   def RemoveNode(self, Removekey):
+      HeadVal = self.headval
 
-   def RemoveNode(self, RemoveKey):
-       pass
+      if (HeadVal is not None):
+         if (HeadVal.dataval == Removekey):
+            self.headval = HeadVal.next
+            HeadVal = None
+            return
+      while (HeadVal is not None):
+         if HeadVal.dataval == Removekey:
+            break
+         prev = HeadVal
+         HeadVal = HeadVal.nextval
+
+      if (HeadVal == None):
+         return
+
+      prev.nextval = HeadVal.nextval
+      HeadVal = None
               
