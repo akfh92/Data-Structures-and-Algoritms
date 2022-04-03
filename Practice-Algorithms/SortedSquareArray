@@ -1,0 +1,28 @@
+write a function that takes in a non-empty array of integers that are sorted in ascending order and returns a new array of the same length with the squares of the original integers also sorted in ascending order
+
+def sortedSquaredArray(array):
+    
+# 	create an array  to return 
+	retArr=[0 for _ in array]
+# Create two indexes to track lower end and upper end
+	smValIdx = 0
+	lgValIdx = len(array)-1
+	
+	for x in reversed(range(len(array))):
+		smVal = array[smValIdx]
+		lgVal = array[lgValIdx]
+		
+		if abs(smVal) > abs(lgVal):
+			
+			retArr[x] = smVal*smVal
+			smValIdx += 1
+		else:
+			
+			retArr[x] = lgVal *lgVal
+			lgValIdx -= 1
+			
+	return retArr
+
+
+# time: O(n)
+# space: O(n)
