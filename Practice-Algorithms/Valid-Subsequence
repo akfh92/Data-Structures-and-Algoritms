@@ -1,0 +1,15 @@
+Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
+
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+# 	first create two index which acts as a pointer for array and the sequence.
+    arrIndex = 0
+	seqIndex = 0 
+# 	while loop to compare in each iteration and if matched then increment the sequence index. 
+	while arrIndex < len(array) and seqIndex < len(sequence):
+		if array[arrIndex] == sequence[seqIndex]:
+			seqIndex += 1
+			
+		arrIndex += 1
+# 	if the sequence index matches the length of the sequence then the function will return true else false.
+	return seqIndex == len(sequence)
