@@ -1,0 +1,16 @@
+# Unlike Stack, Queue is First in First Out
+class Queue:
+    def __init__(self):
+        self.queue = list()
+
+    def addQ(self,dataVal):
+        if dataVal not in self.queue:
+            self.queue.insert(0,dataVal)
+            return True
+        return False
+    def size(self):
+        return len(self.queue)
+    def removeQ(self):
+        if len(self.queue) > 0:
+            self.queue.pop(0)
+        return "No Element in Queue"
