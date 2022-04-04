@@ -22,4 +22,6 @@ This repository will explain the data structure and algorithms in Python.
 * Algorithms
 * Practice Algorithms
   * Easy Problems:
+    * Sorted Square Array
     * Two Sum
+    * Valid Subsequence
