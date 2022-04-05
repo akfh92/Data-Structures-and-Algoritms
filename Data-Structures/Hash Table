@@ -1,0 +1,20 @@
+# Hash Table, in python we use dictionary : Key-Value pair
+
+# to declare a dictionary:
+dict = {'Brand': 'BMW', 'Model':'330i', 'Year':2018}
+
+#  to access dictionary:
+print(dict['Brand'])
+
+# to update dictionary:
+dict['Brand'] = 'Audi'
+print(dict['Brand'])
+
+# To delete an element from a dictionary:
+del dict['Brand']
+
+# To delete all elements from a dictionary:
+dict.clear()
+
+# to delete entire dictionary:
+del dict
